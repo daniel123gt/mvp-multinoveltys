@@ -1,0 +1,440 @@
+---
+// Página de formulario de compra - SENZA Hydrogen Technology
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Compra SENZA - Sistema de Generación de Hidrógeno para Automóviles. Formulario de compra seguro." />
+		<title>Comprar SENZA - Multi Novelty's LLC | Formulario de Compra</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-black text-white font-sans overflow-x-hidden">
+		<!-- Header -->
+		<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-senza-blue/20">
+			<nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+				<div class="flex items-center space-x-2">
+					<div class="w-10 h-10 bg-gradient-to-br from-senza-blue to-senza-accent rounded-lg flex items-center justify-center">
+						<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+						</svg>
+					</div>
+					<div class="flex flex-col">
+						<span class="text-2xl font-bold bg-gradient-to-r from-senza-blue to-senza-accent bg-clip-text text-transparent">Multi Novelty's LLC</span>
+						<span class="text-xs text-gray-400">SENZA Hydrogen Technology</span>
+					</div>
+				</div>
+				<div class="hidden md:flex items-center space-x-8">
+					<a href="/" class="text-gray-300 hover:text-senza-accent transition-colors">Inicio</a>
+					<a href="/#producto" class="text-gray-300 hover:text-senza-accent transition-colors">Producto</a>
+					<a href="/#tecnologia" class="text-gray-300 hover:text-senza-accent transition-colors">Tecnología</a>
+					<a href="/#beneficios" class="text-gray-300 hover:text-senza-accent transition-colors">Beneficios</a>
+				</div>
+				<div class="flex items-center space-x-4">
+					<!-- Language Switcher -->
+					<div class="relative group">
+						<a href="/buy" class="flex items-center space-x-2 text-gray-300 hover:text-senza-accent transition-colors px-3 py-2 rounded-lg hover:bg-senza-blue/20">
+							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.01-4.65.64-6.9-.17-.28-.38-.54-.62-.77L12 2.5l1.5 1.5c.2.2.37.43.53.66.53.74.88 1.61.88 2.54 0 .94-.35 1.81-.88 2.55-.16.23-.33.46-.53.66l-1.5 1.5c-.23-.23-.49-.44-.77-.62-2.25-1.37-4.96-1.1-6.9.64l-.03.03 2.54 2.51c.39.39.39 1.02 0 1.41-.39.39-1.02.39-1.41 0L2.5 13.5c-.39-.39-.39-1.02 0-1.41l2.54-2.51c-1.74 1.94-2.01 4.65-.64 6.9.17.28.38.54.62.77L12 21.5l-1.5-1.5c-.2-.2-.37-.43-.53-.66-.53-.74-.88-1.61-.88-2.54 0-.94.35-1.81.88-2.55.16-.23.33-.46.53-.66l1.5-1.5c.23.23.49.44.77.62 2.25 1.37 4.96 1.1 6.9-.64l.03-.03-2.54-2.51c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l2.54 2.51c.39.39.39 1.02 0 1.41z"/>
+							</svg>
+							<span>🇺🇸 English</span>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="pt-32 pb-20 bg-gradient-to-br from-senza-gray via-black to-senza-dark-blue">
+			<div class="max-w-4xl mx-auto px-6 text-center">
+				<div class="animate-slide-up">
+					<h1 class="text-5xl md:text-6xl font-bold mb-6">
+						<span class="bg-gradient-to-r from-senza-blue to-senza-accent bg-clip-text text-transparent">
+							Compra SENZA
+						</span>
+					</h1>
+					<p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+						Completa el formulario para adquirir tu kit de generación de hidrógeno SENZA y revoluciona tu automóvil.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Product Summary -->
+		<section class="py-16 bg-senza-gray">
+			<div class="max-w-4xl mx-auto px-6">
+				<div class="bg-gradient-to-br from-senza-blue/20 to-senza-accent/20 rounded-3xl p-8 backdrop-blur-sm border border-senza-accent/30">
+					<div class="text-center mb-8">
+						<h2 class="text-3xl font-bold text-white mb-4">Kit SENZA Hydrogen Generator</h2>
+						<div class="w-full max-w-md mx-auto mb-6">
+							<img src="/images/kit-completo-con-leyenda.jpeg" alt="Kit SENZA Completo con Leyenda" class="w-full h-auto rounded-2xl shadow-2xl shadow-senza-accent/20">
+						</div>
+					</div>
+					
+					<div class="grid md:grid-cols-2 gap-8 mb-8">
+						<div>
+							<h3 class="text-xl font-bold text-senza-accent mb-4">Incluye:</h3>
+							<ul class="text-gray-300 space-y-2">
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>Generador de Hidrógeno</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>Microcomputadora</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>Módulo Transformador</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>Tanque de Agua</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>Separador de Agua y Gas</span>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-xl font-bold text-senza-accent mb-4">Beneficios:</h3>
+							<ul class="text-gray-300 space-y-2">
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>20% Ahorro de Combustible</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>25% Más Potencia</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>-40% Emisiones</span>
+								</li>
+								<li class="flex items-center space-x-2">
+									<span class="w-2 h-2 bg-senza-accent rounded-full"></span>
+									<span>Limpieza del Motor</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Product Components Detail -->
+		<section class="py-16 bg-black">
+			<div class="max-w-4xl mx-auto px-6">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-white mb-4">Componentes Individuales</h2>
+					<p class="text-xl text-gray-300">Cada pieza está diseñada para máxima eficiencia y durabilidad</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8 mb-8">
+					<div class="bg-senza-gray/30 backdrop-blur-sm rounded-2xl p-6 border border-senza-blue/30">
+						<div class="text-center mb-4">
+							<img src="/images/pieza-individual-generador-hidrogeno.jpg" alt="Generador de Hidrógeno" class="w-full h-auto rounded-xl shadow-lg shadow-senza-accent/20 mb-4">
+							<h3 class="text-xl font-bold text-senza-accent">Generador de Hidrógeno</h3>
+						</div>
+						<p class="text-gray-300 text-sm text-center">
+							Tecnología PEM avanzada para máxima pureza del hidrógeno generado
+						</p>
+					</div>
+
+					<div class="bg-senza-gray/30 backdrop-blur-sm rounded-2xl p-6 border border-senza-blue/30">
+						<div class="text-center mb-4">
+							<img src="/images/pieza-individual-microcomputador.png" alt="Microcomputadora" class="w-full h-auto rounded-xl shadow-lg shadow-senza-accent/20 mb-4">
+							<h3 class="text-xl font-bold text-senza-accent">Microcomputadora</h3>
+						</div>
+						<p class="text-gray-300 text-sm text-center">
+							Chip de 7nm que optimiza el rendimiento del motor en tiempo real
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Purchase Form -->
+		<section class="py-20 bg-black">
+			<div class="max-w-4xl mx-auto px-6">
+				<div class="bg-senza-gray/30 backdrop-blur-sm rounded-3xl p-8 border border-senza-blue/30">
+					<h2 class="text-3xl font-bold text-center text-white mb-8">Formulario de Compra</h2>
+					
+					<form class="space-y-6">
+						<!-- Personal Information -->
+						<div class="space-y-4">
+							<h3 class="text-xl font-semibold text-senza-accent border-b border-senza-blue/30 pb-2">Información Personal</h3>
+							<div class="grid md:grid-cols-2 gap-4">
+								<div>
+									<label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">Nombre *</label>
+									<input type="text" id="firstName" name="firstName" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+								<div>
+									<label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Apellido *</label>
+									<input type="text" id="lastName" name="lastName" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+							</div>
+							<div class="grid md:grid-cols-2 gap-4">
+								<div>
+									<label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+									<input type="email" id="email" name="email" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+								<div>
+									<label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Teléfono *</label>
+									<input type="tel" id="phone" name="phone" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+							</div>
+						</div>
+
+						<!-- Vehicle Information -->
+						<div class="space-y-4">
+							<h3 class="text-xl font-semibold text-senza-accent border-b border-senza-blue/30 pb-2">Información del Vehículo</h3>
+							<div class="grid md:grid-cols-2 gap-4">
+								<div>
+									<label for="brand" class="block text-sm font-medium text-gray-300 mb-2">Marca *</label>
+									<select id="brand" name="brand" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+										<option value="">Selecciona una marca</option>
+										<option value="toyota">Toyota</option>
+										<option value="honda">Honda</option>
+										<option value="ford">Ford</option>
+										<option value="chevrolet">Chevrolet</option>
+										<option value="nissan">Nissan</option>
+										<option value="volkswagen">Volkswagen</option>
+										<option value="bmw">BMW</option>
+										<option value="mercedes">Mercedes-Benz</option>
+										<option value="audi">Audi</option>
+										<option value="other">Otra</option>
+									</select>
+								</div>
+								<div>
+									<label for="model" class="block text-sm font-medium text-gray-300 mb-2">Modelo *</label>
+									<input type="text" id="model" name="model" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+							</div>
+							<div class="grid md:grid-cols-2 gap-4">
+								<div>
+									<label for="year" class="block text-sm font-medium text-gray-300 mb-2">Año *</label>
+									<select id="year" name="year" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+										<option value="">Selecciona el año</option>
+										<option value="2024">2024</option>
+										<option value="2023">2023</option>
+										<option value="2022">2022</option>
+										<option value="2021">2021</option>
+										<option value="2020">2020</option>
+										<option value="2019">2019</option>
+										<option value="2018">2018</option>
+										<option value="2017">2017</option>
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="older">Anterior a 2015</option>
+									</select>
+								</div>
+								<div>
+									<label for="engine" class="block text-sm font-medium text-gray-300 mb-2">Tipo de Motor *</label>
+									<select id="engine" name="engine" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+										<option value="">Selecciona el tipo</option>
+										<option value="gasoline">Gasolina</option>
+										<option value="diesel">Diesel</option>
+										<option value="hybrid">Híbrido</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<!-- Shipping Information -->
+						<div class="space-y-4">
+							<h3 class="text-xl font-semibold text-senza-accent border-b border-senza-blue/30 pb-2">Información de Envío</h3>
+							<div>
+								<label for="address" class="block text-sm font-medium text-gray-300 mb-2">Dirección *</label>
+								<input type="text" id="address" name="address" required 
+									class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+							</div>
+							<div class="grid md:grid-cols-3 gap-4">
+								<div>
+									<label for="city" class="block text-sm font-medium text-gray-300 mb-2">Ciudad *</label>
+									<input type="text" id="city" name="city" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+								<div>
+									<label for="state" class="block text-sm font-medium text-gray-300 mb-2">Estado/Provincia *</label>
+									<input type="text" id="state" name="state" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+								<div>
+									<label for="zipCode" class="block text-sm font-medium text-gray-300 mb-2">Código Postal *</label>
+									<input type="text" id="zipCode" name="zipCode" required 
+										class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all">
+								</div>
+							</div>
+						</div>
+
+						<!-- Additional Information -->
+						<div class="space-y-4">
+							<h3 class="text-xl font-semibold text-senza-accent border-b border-senza-blue/30 pb-2">Información Adicional</h3>
+							<div>
+								<label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensaje (Opcional)</label>
+								<textarea id="message" name="message" rows="4" 
+									class="w-full px-4 py-3 bg-senza-gray/50 border border-senza-blue/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-senza-accent focus:border-transparent transition-all"
+									placeholder="Comentarios adicionales, preguntas o información especial..."></textarea>
+							</div>
+						</div>
+
+						<!-- Terms and Submit -->
+						<div class="space-y-6">
+							<div class="flex items-start space-x-3">
+								<input type="checkbox" id="terms" name="terms" required 
+									class="mt-1 w-4 h-4 text-senza-accent bg-senza-gray/50 border-senza-blue/30 rounded focus:ring-senza-accent focus:ring-2">
+								<label for="terms" class="text-sm text-gray-300">
+									Acepto los <a href="#" class="text-senza-accent hover:underline">términos y condiciones</a> y la <a href="#" class="text-senza-accent hover:underline">política de privacidad</a> *
+								</label>
+							</div>
+							<div class="flex items-start space-x-3">
+								<input type="checkbox" id="newsletter" name="newsletter" 
+									class="mt-1 w-4 h-4 text-senza-accent bg-senza-gray/50 border-senza-blue/30 rounded focus:ring-senza-accent focus:ring-2">
+								<label for="newsletter" class="text-sm text-gray-300">
+									Deseo recibir información sobre nuevas tecnologías y ofertas especiales
+								</label>
+							</div>
+							
+							<button type="submit" 
+								class="w-full bg-gradient-to-r from-senza-blue to-senza-accent text-white py-4 px-8 rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-senza-accent/30 transition-all transform hover:scale-105">
+								Enviar Solicitud de Compra
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Information -->
+		<section class="py-20 bg-senza-gray">
+			<div class="max-w-4xl mx-auto px-6 text-center">
+				<h2 class="text-3xl font-bold text-white mb-8">¿Tienes Preguntas?</h2>
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-senza-gray/50 backdrop-blur-sm rounded-2xl p-6 border border-senza-blue/20">
+						<div class="w-16 h-16 bg-gradient-to-br from-senza-blue to-senza-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-white mb-2">Email</h3>
+						<p class="text-gray-300">info@senza.com</p>
+					</div>
+					<div class="bg-senza-gray/50 backdrop-blur-sm rounded-2xl p-6 border border-senza-blue/20">
+						<div class="w-16 h-16 bg-gradient-to-br from-senza-blue to-senza-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-white mb-2">Teléfono</h3>
+						<p class="text-gray-300">+1 (555) 123-4567</p>
+					</div>
+					<div class="bg-senza-gray/50 backdrop-blur-sm rounded-2xl p-6 border border-senza-blue/20">
+						<div class="w-16 h-16 bg-gradient-to-br from-senza-blue to-senza-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+							<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-white mb-2">Ubicación</h3>
+						<p class="text-gray-300">Multi Novelty's LLC</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-black py-16">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="grid md:grid-cols-4 gap-8">
+					<div class="col-span-2">
+						<div class="flex items-center space-x-2 mb-6">
+							<div class="w-10 h-10 bg-gradient-to-br from-senza-blue to-senza-accent rounded-lg flex items-center justify-center">
+								<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+								</svg>
+							</div>
+							<div class="flex flex-col">
+								<span class="text-2xl font-bold text-white">Multi Novelty's LLC</span>
+								<span class="text-sm text-gray-400">SENZA Hydrogen Technology</span>
+							</div>
+						</div>
+						<p class="text-gray-300 mb-6 max-w-md">
+							Empresa importadora líder en tecnología innovadora. Comercializamos SENZA, la revolucionaria tecnología de hidrógeno para automóviles.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-white mb-4">Producto</h3>
+						<ul class="space-y-2 text-gray-300">
+							<li><a href="/#producto" class="hover:text-senza-accent transition-colors">Características</a></li>
+							<li><a href="/#tecnologia" class="hover:text-senza-accent transition-colors">Tecnología</a></li>
+							<li><a href="/#beneficios" class="hover:text-senza-accent transition-colors">Beneficios</a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-lg font-semibold text-white mb-4">Contacto</h3>
+						<ul class="space-y-2 text-gray-300">
+							<li>info@senza.com</li>
+							<li>+1 (555) 123-4567</li>
+							<li>Multi Novelty's LLC</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-senza-blue/20 mt-12 pt-8 text-center text-gray-400">
+					<p>© 2025 Multi Novelty's LLC. Todos los derechos reservados.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Form validation and submission
+			document.querySelector('form').addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				// Basic validation
+				const requiredFields = document.querySelectorAll('[required]');
+				let isValid = true;
+				
+				requiredFields.forEach(field => {
+					if (!field.value.trim()) {
+						isValid = false;
+						field.classList.add('border-red-500');
+					} else {
+						field.classList.remove('border-red-500');
+					}
+				});
+				
+				if (isValid) {
+					// Show success message (in real app, send to server)
+					alert('¡Gracias! Tu solicitud de compra ha sido enviada. Nos pondremos en contacto contigo pronto.');
+					this.reset();
+				} else {
+					alert('Por favor, completa todos los campos obligatorios.');
+				}
+			});
+
+			// Remove red border on input
+			document.querySelectorAll('input, select, textarea').forEach(field => {
+				field.addEventListener('input', function() {
+					this.classList.remove('border-red-500');
+				});
+			});
+		</script>
+	</body>
+</html>
