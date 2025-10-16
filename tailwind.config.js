@@ -4,12 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'senza-blue': '#0F766E',        // Teal más verde, menos azul
-        'senza-light-blue': '#14B8A6',  // Teal medio balanceado
-        'senza-dark-blue': '#065F46',   // Verde oscuro con toque azul
-        'senza-accent': '#0D9488',      // Teal vibrante balanceado
-        'senza-gray': '#0F172A',        // Gris azulado muy oscuro
-        'senza-light-gray': '#F8FAFC',  // Gris muy claro
+        'senza-primary': '#ffffff',     // Blanco puro para fondos principales
+        'senza-secondary': '#f8fafc',   // Gris muy claro para secciones
+        'senza-accent': '#00003f',      // Azul muy oscuro para textos principales
+        'senza-blue': '#3461f2',        // Azul medio vibrante (oficial)
+        'senza-light-blue': '#00c8f3',  // Cian brillante (oficial)
+        'senza-dark-blue': '#0f18d7',   // Azul real eléctrico (oficial)
+        'senza-gray': '#64748b',        // Gris medio para textos secundarios
+        'senza-light-gray': '#94a3b8',  // Gris claro para textos terciarios
+        'senza-yellow': '#ffce00',      // Amarillo vibrante (muy poco uso)
+        'senza-border': '#e2e8f0',      // Gris claro para bordes
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
