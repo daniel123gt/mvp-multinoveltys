@@ -301,7 +301,7 @@ import LayoutPurchase from '../layouts/LayoutPurchase.astro';
 						</svg>
 					</div>
 					<h3 class="text-xl font-bold text-senza-accent mb-2">Email</h3>
-					<p class="text-senza-gray">info@senza.com</p>
+					<p class="text-senza-gray">contact@senzamultinoveltysllc.com</p>
 				</div>
 				
 				<div class="bg-white rounded-2xl p-6 shadow-lg border border-senza-border">
@@ -311,7 +311,7 @@ import LayoutPurchase from '../layouts/LayoutPurchase.astro';
 						</svg>
 					</div>
 					<h3 class="text-xl font-bold text-senza-accent mb-2">Phone</h3>
-					<p class="text-senza-gray">+1 (555) 123-4567</p>
+					<p class="text-senza-gray">1-786-4447521 (Text)</p>
 				</div>
 				
 				<div class="bg-white rounded-2xl p-6 shadow-lg border border-senza-border">
@@ -350,7 +350,7 @@ import LayoutPurchase from '../layouts/LayoutPurchase.astro';
 				// Email validation
 				const email = document.getElementById('email') as HTMLInputElement;
 				if (email) {
-					const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+US $/;
+					const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 					if (!emailRegex.test(email.value)) {
 						isValid = false;
 						email.classList.add('border-red-500');
@@ -360,7 +360,7 @@ import LayoutPurchase from '../layouts/LayoutPurchase.astro';
 				// Phone validation
 				const phone = document.getElementById('phone') as HTMLInputElement;
 				if (phone) {
-					const phoneRegex = /^[\+]?[1-9][\d]{0,15}US $/;
+					const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
 					if (!phoneRegex.test(phone.value.replace(/\s/g, ''))) {
 						isValid = false;
 						phone.classList.add('border-red-500');
