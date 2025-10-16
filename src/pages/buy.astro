@@ -117,9 +117,25 @@ import LayoutPurchase from '../layouts/LayoutPurchase.astro';
 			<div class="bg-white rounded-3xl p-8 shadow-xl border border-senza-border">
 				<div class="text-center mb-12">
 					<h2 class="text-4xl font-bold text-senza-accent mb-4">Purchase Form</h2>
-					<p class="text-lg text-senza-gray">
+					<p class="text-lg text-senza-gray mb-6">
 						Fill out the form below to complete your purchase. We will contact you within 24 hours.
 					</p>
+					
+					<!-- Delivery Information -->
+					<div class="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-2xl p-6 max-w-2xl mx-auto">
+						<div class="flex items-center justify-center mb-3">
+							<svg class="w-6 h-6 text-orange-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+							</svg>
+							<h3 class="text-xl font-bold text-orange-700">Delivery Information</h3>
+						</div>
+						<div class="space-y-2 text-orange-600">
+							<p><strong>⏱️ Delivery time:</strong> Up to 30 business days</p>
+							<p><strong>📦 Limited stock:</strong> Launch product with restricted availability</p>
+							<p><strong>🚚 Shipping:</strong> Included in price (domestic territory only)</p>
+							<p><strong>📞 Tracking:</strong> We will send you the tracking number once processed</p>
+						</div>
+					</div>
 				</div>
 
 				<form id="purchaseForm" class="space-y-8">
@@ -385,21 +401,21 @@ import LayoutPurchase from '../layouts/LayoutPurchase.astro';
 		};
 
 		function updatePrice() {
-			const packageType = document.getElementById('tipoPaquete')?.value;
-			const power = document.getElementById('potencia')?.value;
-			const priceDisplay = document.getElementById('precioTotal');
-			const detailDisplay = document.getElementById('detallePrecio');
+			const packageType = (document.getElementById('tipoPaquete') as HTMLSelectElement)?.value;
+			const power = (document.getElementById('potencia') as HTMLSelectElement)?.value;
+			const priceDisplay = document.getElementById('precioTotal') as HTMLElement;
+			const detailDisplay = document.getElementById('detallePrecio') as HTMLElement;
 
-			if (!packageType || !power || !priceDisplay) return;
+			if (!packageType || !power || !priceDisplay || !detailDisplay) return;
 
-			const packageData = pricingData[packageType];
-			if (packageData && packageData[power]) {
-				const price = packageData[power].price;
+			const packageData = pricingData[packageType as keyof typeof pricingData];
+			if (packageData && packageData[power as keyof typeof packageData]) {
+				const price = packageData[power as keyof typeof packageData].price;
 				priceDisplay.textContent = `$${price.toLocaleString()}`;
 				
 				const packageName = packageType === 'normal' ? 'Normal One' : 'All in One';
 				const powerName = power.toUpperCase() + ' Power';
-				const engineRange = packageData[power];
+				const engineRange = packageData[power as keyof typeof packageData];
 				detailDisplay.textContent = `${packageName} - ${powerName} (${engineRange.min}-${engineRange.max}L)`;
 			} else {
 				priceDisplay.textContent = '$0';
