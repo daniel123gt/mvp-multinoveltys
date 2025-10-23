@@ -467,6 +467,21 @@
 									Generador de hidrógeno de potencia baja
 								</div>
 							</div>
+
+							<!-- Nano Computer -->
+							<div class="bg-senza-secondary rounded-2xl p-6 border border-senza-border">
+								<div class="flex justify-between items-center mb-3">
+									<h4 class="text-xl font-bold text-senza-accent">Nano Computer</h4>
+									<span class="text-2xl font-bold text-senza-blue">US $700</span>
+								</div>
+								<p class="text-senza-gray mb-3">Solo computadora de control</p>
+								<div class="flex items-center text-sm text-senza-gray">
+									<svg class="w-4 h-4 mr-2 text-senza-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+									</svg>
+									Computadora de control nano para sistemas existentes
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -525,6 +540,18 @@
 									
 								</div>
 							</div>
+
+							<!-- Nano Computer -->
+							<div class="bg-senza-secondary rounded-2xl p-6 border border-senza-border">
+								<div class="flex justify-between items-center mb-3">
+									<h4 class="text-xl font-bold text-senza-accent">Nano Computer</h4>
+									<span class="text-2xl font-bold text-senza-light-blue">US $840</span>
+								</div>
+								<p class="text-senza-gray mb-3">Solo computadora de control</p>
+								<div class="flex items-center text-sm text-senza-gray">
+									
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -539,8 +566,9 @@
 					<div class="grid md:grid-cols-3 gap-6 mb-8">
 						<div>
 							<label class="block text-sm font-medium text-senza-gray mb-2">Tamaño del Motor (L)</label>
-							<input type="number" id="engineSize" step="0.1" min="1.0" max="6.0" placeholder="2.5" 
+							<input type="number" id="engineSize" step="0.1" min="0" max="6.0" placeholder="2.5" 
 								class="w-full px-4 py-3 bg-senza-secondary border border-senza-border rounded-lg text-senza-accent focus:outline-none focus:ring-2 focus:ring-senza-blue">
+							<p class="text-xs text-senza-gray mt-1">Dejar en 0 para Nano Computer</p>
 						</div>
 						<div>
 							<label class="block text-sm font-medium text-senza-gray mb-2">Tipo de Paquete</label>
@@ -549,6 +577,7 @@
 								<option value="">Seleccionar</option>
 								<option value="normal">Normal One</option>
 								<option value="allinone">All in One</option>
+								<option value="nano">Nano Computer</option>
 							</select>
 						</div>
 						<div>
@@ -1186,12 +1215,14 @@
 			normal: {
 				h: { min: 2.7, max: 5.5, price: 1990 },
 				m: { min: 2.0, max: 2.5, price: 1850 },
-				l: { min: 1.0, max: 1.8, price: 1650 }
+				l: { min: 1.0, max: 1.8, price: 1650 },
+				nano: { min: 0, max: 0, price: 700 }
 			},
 			allinone: {
 				h: { min: 2.7, max: 5.5, price: 2388 },
 				m: { min: 2.0, max: 2.5, price: 2220 },
-				l: { min: 1.0, max: 1.8, price: 1980 }
+				l: { min: 1.0, max: 1.8, price: 1980 },
+				nano: { min: 0, max: 0, price: 840 }
 			}
 		};
 
@@ -1200,7 +1231,22 @@
 			const packageType = (document.getElementById('packageType') as HTMLSelectElement)?.value || 'normal';
 			const priceDisplay = document.getElementById('calculatedPrice') as HTMLElement;
 
-			if (!engineSize || !packageType) {
+			if (!packageType) {
+				priceDisplay.textContent = 'US $0';
+				priceDisplay.classList.remove('text-senza-light-blue', 'text-senza-blue');
+				return;
+			}
+
+			// Handle Nano Computer separately
+			if (packageType === 'nano') {
+				const price = 700;
+				priceDisplay.textContent = `US $${price.toLocaleString()}`;
+				priceDisplay.classList.add('text-senza-light-blue');
+				priceDisplay.classList.remove('text-senza-blue');
+				return;
+			}
+
+			if (!engineSize) {
 				priceDisplay.textContent = 'US $0';
 				priceDisplay.classList.remove('text-senza-light-blue', 'text-senza-blue');
 				return;
@@ -1220,7 +1266,7 @@
 
 			if (selectedPower && packageData && packageData[selectedPower as keyof typeof packageData]) {
 				const price = packageData[selectedPower as keyof typeof packageData].price;
-				priceDisplay.textContent = `US $US ${price.toLocaleString()}`;
+				priceDisplay.textContent = `US $${price.toLocaleString()}`;
 				priceDisplay.classList.add('text-senza-light-blue');
 				priceDisplay.classList.remove('text-senza-blue');
 			} else {
