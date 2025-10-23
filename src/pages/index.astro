@@ -467,7 +467,22 @@
 									Generador de hidrógeno de potencia baja
 								</div>
 							</div>
+						</div>
+					</div>
 
+					<!-- Nano Computer Package -->
+					<div class="bg-white rounded-3xl p-8 shadow-xl border border-senza-border">
+						<div class="text-center mb-8">
+							<div class="w-16 h-16 bg-senza-dark-blue rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+								</svg>
+							</div>
+							<h3 class="text-2xl font-bold text-senza-accent mb-2">Nano Computer</h3>
+							<p class="text-senza-gray">Solo computadora de control</p>
+						</div>
+
+						<div class="space-y-4">
 							<!-- Nano Computer -->
 							<div class="bg-senza-secondary rounded-2xl p-6 border border-senza-border">
 								<div class="flex justify-between items-center mb-3">
@@ -536,18 +551,6 @@
 											<span class="text-2xl font-bold text-senza-light-blue">US $1,980</span>
 								</div>
 								<p class="text-senza-gray mb-3">Motores de 1.0 a 1.8 litros</p>
-								<div class="flex items-center text-sm text-senza-gray">
-									
-								</div>
-							</div>
-
-							<!-- Nano Computer -->
-							<div class="bg-senza-secondary rounded-2xl p-6 border border-senza-border">
-								<div class="flex justify-between items-center mb-3">
-									<h4 class="text-xl font-bold text-senza-accent">Nano Computer</h4>
-									<span class="text-2xl font-bold text-senza-light-blue">US $840</span>
-								</div>
-								<p class="text-senza-gray mb-3">Solo computadora de control</p>
 								<div class="flex items-center text-sm text-senza-gray">
 									
 								</div>
@@ -1215,14 +1218,15 @@
 			normal: {
 				h: { min: 2.7, max: 5.5, price: 1990 },
 				m: { min: 2.0, max: 2.5, price: 1850 },
-				l: { min: 1.0, max: 1.8, price: 1650 },
-				nano: { min: 0, max: 0, price: 700 }
+				l: { min: 1.0, max: 1.8, price: 1650 }
 			},
 			allinone: {
 				h: { min: 2.7, max: 5.5, price: 2388 },
 				m: { min: 2.0, max: 2.5, price: 2220 },
-				l: { min: 1.0, max: 1.8, price: 1980 },
-				nano: { min: 0, max: 0, price: 840 }
+				l: { min: 1.0, max: 1.8, price: 1980 }
+			},
+			nano: {
+				nano: { min: 0, max: 0, price: 700 }
 			}
 		};
 
@@ -1265,7 +1269,7 @@
 			}
 
 			if (selectedPower && packageData && packageData[selectedPower as keyof typeof packageData]) {
-				const price = packageData[selectedPower as keyof typeof packageData].price;
+				const price = (packageData[selectedPower as keyof typeof packageData] as any).price;
 				priceDisplay.textContent = `US $${price.toLocaleString()}`;
 				priceDisplay.classList.add('text-senza-light-blue');
 				priceDisplay.classList.remove('text-senza-blue');
